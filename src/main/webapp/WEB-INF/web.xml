@@ -10,4 +10,7 @@
 		<servlet-name>MyAPI</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+	<listener>
+		<listener-class>org.springframework.web.context.support.XmlWebApplicationContext</listener-class>
+	</listener>
 </web-app>
