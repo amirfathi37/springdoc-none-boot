@@ -9,6 +9,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @Component
 @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+<<<<<<< HEAD
 //@formatter:off
 /*
  * ConfigurableBeanFactory.SCOPE_SINGLETON
@@ -17,6 +18,8 @@ import org.springframework.web.context.WebApplicationContext;
  * WebApplicationContext.SCOPE_SESSION
  */
 //@formatter:on
+=======
+>>>>>>> 0490103e0bcfc32a92231b5f1d0e802e223b9de5
 public class Sess {
     private final int id;
 
