@@ -8,8 +8,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 @Component
-// @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+//@formatter:off
+/*
+ * ConfigurableBeanFactory.SCOPE_SINGLETON
+ * ConfigurableBeanFactory.SCOPE_PROTOTYPE
+ * WebApplicationContext.SCOPE_REQUEST
+ * WebApplicationContext.SCOPE_SESSION
+ */
+//@formatter:on
 public class Sess {
     private final int id;
 
