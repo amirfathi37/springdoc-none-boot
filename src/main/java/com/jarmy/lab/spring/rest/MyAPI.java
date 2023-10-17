@@ -1,28 +1,28 @@
 package com.jarmy.lab.spring.rest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.*;
+
 @RestController
+@RequestMapping("/api")
 public class MyAPI {
 
     @Autowired
     private Sess sess;
 
-    @RequestMapping(value = "/test2")
+    //    @Operation(summary = "foo", description = "bar")
+    @ApiOperation(value = "Find base info by its code", notes = "This api will return a base info data by its code")
+    @RequestMapping(value = "/test2", method = RequestMethod.GET)
     public int hello2() {
         return sess.getId();
     }
 
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
     public MyUser hello() {
         MyUser user = new MyUser();
         user.setName("Abbas");
