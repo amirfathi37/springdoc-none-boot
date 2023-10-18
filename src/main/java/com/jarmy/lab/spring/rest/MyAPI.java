@@ -1,6 +1,6 @@
 package com.jarmy.lab.spring.rest;
 
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,8 +15,8 @@ public class MyAPI {
     @Autowired
     private Sess sess;
 
-    //    @Operation(summary = "foo", description = "bar")
-    @ApiOperation(value = "Find base info by its code", notes = "This api will return a base info data by its code")
+        @Operation(summary = "foo", description = "bar")
+    //    @ApiOperation(value = "Find base info by its code", notes = "This api will return a base info data by its code")
     @RequestMapping(value = "/test2", method = RequestMethod.GET)
     public int hello2() {
         return sess.getId();
